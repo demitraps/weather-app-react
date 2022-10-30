@@ -1,0 +1,46 @@
+body {
+  background: url("https://images.pexels.com/photos/1433278/pexels-photo-1433278.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2")
+    no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+  font-family: "Montserrat", sans-serif;
+  padding: 42px 30px 0px 5px;
+  color: #fff;
+}
+
+.App .signature {
+  margin-top: 10px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 12px;
+}
+
+.App .github-link {
+  color: #c8c2c2;
+  text-decoration: none;
+}
+
+.App .github-link:hover {
+  color: #fff;
+}
+
+@media (max-width: 576px) {
+  body {
+    padding-top: 35px;
+    padding-right: 12px;
+  }
+  .App .signature {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 365px) {
+  body {
+    padding-top: 30px;
+  }
+  .App .signature {
+    font-size: 9px;
+  }
+}

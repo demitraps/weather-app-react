@@ -1,0 +1,328 @@
+.Weather ul {
+  list-style-type: none;
+}
+
+.Weather li {
+  margin: 0;
+  padding: 0;
+}
+
+.Weather .weather-description {
+  font-size: 39px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+.Weather .city-searched {
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 15px;
+}
+.Weather .current-date {
+  font-size: 11px;
+  font-weight: 800;
+}
+.Weather .time-now {
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.Weather .time {
+  font-weight: 800;
+}
+.Weather .temperature-now {
+  font-size: 50px;
+  font-weight: 700;
+}
+
+.Weather .unit-switch {
+  color: #fff;
+  text-decoration: none;
+  font-size: 9px;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.Weather .fahreneit-switch {
+  color: #fff;
+  text-decoration: none;
+  font-size: 9px;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.Weather .fahreneit-switch:hover {
+  color: rgb(216, 206, 206);
+}
+
+.Weather .celsius-switch {
+  color: #fff;
+  text-decoration: none;
+  font-size: 9px;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.Weather .celsius-switch:hover {
+  color: rgb(216, 206, 206);
+}
+
+.weather-now-icon {
+  font-size: 80px;
+  font-weight: 700;
+}
+
+.Weather .weather-additions {
+  font-size: 13px;
+  font-weight: 800;
+  text-align: center;
+  margin-top: 15px;
+  text-align: right;
+}
+.Weather .additions-icon {
+  display: inline;
+  font-size: 15px;
+  margin-left: 5px;
+  text-align: right;
+}
+.Weather .additions-values {
+  font-size: 27px;
+  font-weight: 400;
+  text-align: right;
+  padding-bottom: 10px;
+}
+
+.Weather input {
+  margin-left: 5px;
+  background: transparent;
+  text-align: center;
+  border-width: 1px;
+  border-style: none none solid none;
+  border-color: #fff;
+}
+
+.Weather input::placeholder {
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.Weather input[type="search"] {
+  color: #fff;
+}
+
+.Weather input[type="submit"] {
+  background-color: #fff;
+  border: solid;
+  border-width: 1px;
+  border-color: #fff;
+  border-radius: 6px 6px 6px 6px;
+}
+
+@media (max-width: 992px) {
+  .Weather .additions-values {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 768px) {
+  .Weather .weather-description {
+    font-size: 35px;
+  }
+  .Weather .temperature-now {
+    font-size: 48px;
+  }
+  .weather-now-icon {
+    font-size: 75px;
+  }
+  .Weather .right-section {
+    margin-top: 40px;
+  }
+  .Weather .weather-additions {
+    font-size: 12px;
+    margin-top: 12px;
+  }
+
+  .Weather .additions-values {
+    font-size: 22px;
+    padding-bottom: 7px;
+  }
+  .Weather input::placeholder {
+    font-size: 12px;
+  }
+
+  .Weather input[type="search"] {
+    font-size: 13px;
+  }
+
+  .Weather input[type="submit"] {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 576px) {
+  .Weather ul {
+    padding-left: 10px;
+  }
+  .Weather .weather-description {
+    font-size: 32px;
+  }
+  .Weather .city-searched {
+    font-size: 16px;
+  }
+  .Weather .current-date {
+    font-size: 11px;
+  }
+  .Weather .time-now {
+    font-size: 11px;
+  }
+  .Weather .temperature-now {
+    font-size: 40px;
+  }
+
+  .Weather .unit-switch {
+    font-size: 10px;
+  }
+
+  .Weather .fahreneit-switch {
+    font-size: 10px;
+  }
+
+  .Weather .celsius-switch {
+    font-size: 10px;
+  }
+
+  .weather-now-icon {
+    font-size: 68px;
+  }
+
+  .Weather .right-section {
+    margin-top: 74px;
+  }
+
+  .Weather .weather-additions {
+    font-size: 11px;
+    font-weight: 700;
+    margin-top: 12px;
+  }
+  .Weather .additions-icon {
+    font-size: 12px;
+  }
+  .Weather .additions-values {
+    font-size: 18px;
+  }
+  .Weather input::placeholder {
+    font-size: 10px;
+  }
+
+  .Weather input[type="search"] {
+    font-size: 8px;
+  }
+
+  .Weather input[type="submit"] {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 365px) {
+  .Weather .weather-description {
+    font-size: 25px;
+  }
+  .Weather .city-searched {
+    font-size: 14px;
+  }
+  .Weather .current-date {
+    font-size: 9px;
+  }
+  .Weather .time-now {
+    font-size: 9px;
+  }
+  .Weather .temperature-now {
+    font-size: 35px;
+  }
+
+  .Weather .unit-switch {
+    font-size: 9px;
+    margin-bottom: 7px;
+  }
+
+  .Weather .fahreneit-switch {
+    font-size: 9px;
+  }
+
+  .Weather .celsius-switch {
+    font-size: 9px;
+  }
+
+  .weather-now-icon {
+    font-size: 55px;
+  }
+
+  .Weather .right-section {
+    margin-top: 65px;
+  }
+
+  .Weather .weather-additions {
+    font-size: 10px;
+    font-weight: 700;
+    margin-top: 8px;
+  }
+  .Weather .additions-icon {
+    font-size: 11px;
+  }
+  .Weather .additions-values {
+    font-size: 12px;
+  }
+  .Weather input::placeholder {
+    font-size: 7px;
+  }
+
+  .Weather input[type="search"] {
+    font-size: 7px;
+  }
+
+  .Weather input[type="submit"] {
+    font-size: 7px;
+  }
+}
+
+@media (max-width: 285px) {
+  .Weather .weather-description {
+    font-size: 23px;
+  }
+  .Weather .city-searched {
+    margin-bottom: 12px;
+  }
+  .Weather .temperature-now {
+    font-size: 30px;
+  }
+  .weather-now-icon {
+    font-size: 48px;
+  }
+  .Weather .right-section {
+    margin-top: 60px;
+  }
+
+  .Weather .weather-additions {
+    font-size: 8px;
+    font-weight: 700;
+    margin-top: 3px;
+  }
+  .Weather .additions-icon {
+    font-size: 9px;
+  }
+  .Weather .additions-values {
+    font-size: 11px;
+  }
+  .Weather input::placeholder {
+    font-size: 6px;
+  }
+
+  .Weather input[type="search"] {
+    font-size: 6px;
+  }
+
+  .Weather input[type="submit"] {
+    font-size: 6px;
+  }
+}
