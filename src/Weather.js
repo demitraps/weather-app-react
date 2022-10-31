@@ -7,6 +7,7 @@ import {
   faDroplet,
   faWind,
 } from "@fortawesome/free-solid-svg-icons";
+import SearchForm from "./SearchForm";
 import "./Weather.css";
 
 export default function Weather() {
@@ -41,10 +42,9 @@ export default function Weather() {
               <FontAwesomeIcon icon={faSun} />
             </li>
           </ul>
-          <form>
-            <input type="search" placeholder="Search city..." />
-            <input type="submit" value="Go" />
-          </form>
+          <div className="d-none d-sm-block">
+            <SearchForm />
+          </div>
         </div>
         <div className="col right-section">
           <ul>
@@ -88,6 +88,9 @@ export default function Weather() {
             </li>
           </ul>
         </div>
+      </div>
+      <div className="ps-1 d-block d-sm-none mobile-search">
+        <SearchForm />
       </div>
     </div>
   );

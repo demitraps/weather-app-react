@@ -7,7 +7,7 @@ export default function App() {
       <div className="container">
         <Weather />
       </div>
-      <footer className="signature">
+      <footer className="signature pt-5">
         <a
           href="https://github.com/demitraps/react-weather-app"
           target="_blank"
