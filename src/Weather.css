@@ -95,6 +95,34 @@
   text-align: center;
 }
 
+.Weather input {
+  margin-left: 5px;
+  background: transparent;
+  text-align: center;
+  border-width: 1px;
+  border-style: none none solid none;
+  border-color: #fff;
+}
+
+.Weather input::placeholder {
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.Weather input[type="search"] {
+  color: #fff;
+}
+
+.Weather input[type="submit"] {
+  background-color: #fff;
+  border: solid;
+  border-width: 1px;
+  border-color: #fff;
+  border-radius: 6px 6px 6px 6px;
+}
+
 @media (max-width: 992px) {
   .Weather .additions-values {
     font-size: 22px;
@@ -122,6 +150,17 @@
   .Weather .additions-values {
     font-size: 22px;
     padding-bottom: 7px;
+  }
+  .Weather input::placeholder {
+    font-size: 12px;
+  }
+
+  .Weather input[type="search"] {
+    font-size: 10px;
+  }
+
+  .Weather input[type="submit"] {
+    font-size: 13px;
   }
 }
 
@@ -176,6 +215,18 @@
   .Weather .additions-values {
     font-size: 18px;
   }
+  .Weather input::placeholder {
+    font-size: 12px;
+    letter-spacing: 2px;
+  }
+
+  .Weather input[type="search"] {
+    font-size: 24px;
+  }
+
+  .Weather input[type="submit"] {
+    font-size: 14px;
+  }
 }
 
 @media (max-width: 365px) {
@@ -227,6 +278,18 @@
   .Weather .additions-values {
     font-size: 12px;
   }
+  .Weather input::placeholder {
+    font-size: 11px;
+    letter-spacing: 1px;
+  }
+
+  .Weather input[type="search"] {
+    font-size: 16px;
+  }
+
+  .Weather input[type="submit"] {
+    font-size: 12px;
+  }
 }
 
 @media (max-width: 285px) {
@@ -256,5 +319,16 @@
   }
   .Weather .additions-values {
     font-size: 11px;
+  }
+  .Weather input::placeholder {
+    font-size: 10px;
+  }
+
+  .Weather input[type="search"] {
+    font-size: 12px;
+  }
+
+  .Weather input[type="submit"] {
+    font-size: 10px;
   }
 }
