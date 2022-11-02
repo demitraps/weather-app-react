@@ -17,18 +17,24 @@ import "./Weather.css";
 export default function Weather(props) {
   const [city, setCity] = useState(props.defaultCity);
   const [weatherData, setWeatherData] = useState({ readyStatus: false });
+  const [temperature, setTemperature] = useState("");
+  const [feelsLike, setFeelsLike] = useState("");
+  const [minTemp, setMinTemp] = useState("");
+  const [maxTemp, setMaxTemp] = useState("");
+  const [unit, setUnit] = useState("°C");
+  const [click, setClick] = useState(0);
 
   function showWeatherData(response) {
+    setTemperature(response.data.main.temp);
+    setFeelsLike(response.data.main.feels_like);
+    setMinTemp(response.data.main.temp_min);
+    setMaxTemp(response.data.main.temp_max);
     setWeatherData({
       readyStatus: true,
       description: response.data.weather[0].description,
       city: response.data.name,
       date: new Date(response.data.dt * 1000),
-      temperature: response.data.main.temp,
       icon: response.data.weather[0].icon,
-      feelsLike: response.data.main.feels_like,
-      minTemp: response.data.main.temp_min,
-      maxTemp: response.data.main.temp_max,
       humidity: response.data.main.humidity,
       wind: response.data.wind.speed,
     });
@@ -46,6 +52,31 @@ export default function Weather(props) {
 
   function handleCityChange(event) {
     setCity(event.target.value);
+  }
+
+  function switchToFahreneit(event) {
+    event.preventDefault();
+    if (click === 0) {
+      setClick(click + 1);
+      console.log(click);
+      setUnit("°F");
+      setTemperature((temperature * 9) / 5 + 32);
+      setFeelsLike((feelsLike * 9) / 5 + 32);
+      setMinTemp((minTemp * 9) / 5 + 32);
+      setMaxTemp((maxTemp * 9) / 5 + 32);
+    }
+  }
+
+  function switchToCelsius(event) {
+    event.preventDefault();
+    if (click === 1) {
+      setClick(0);
+      setUnit("°C");
+      setTemperature(((temperature - 32) * 5) / 9);
+      setFeelsLike(((feelsLike - 32) * 5) / 9);
+      setMinTemp(((minTemp - 32) * 5) / 9);
+      setMaxTemp(((maxTemp - 32) * 5) / 9);
+    }
   }
 
   if (weatherData.readyStatus) {
@@ -68,16 +99,24 @@ export default function Weather(props) {
             </ul>
             <ul>
               <li className="temperature-now">
-                <span>{Math.round(weatherData.temperature)}</span>
-                <span>°C</span>
+                <span>{Math.round(temperature)}</span>
+                <span>{unit}</span>
               </li>
               <li className="unit-switch">
                 switch to{" "}
-                <a href="/" className="fahreneit-switch text-white">
+                <a
+                  href="/"
+                  className="fahreneit-switch text-white"
+                  onClick={switchToFahreneit}
+                >
                   °F
                 </a>{" "}
                 |{" "}
-                <a href="/" className="celsius-switch text-white">
+                <a
+                  href="/"
+                  className="celsius-switch text-white"
+                  onClick={switchToCelsius}
+                >
                   °C
                 </a>
               </li>
@@ -107,7 +146,8 @@ export default function Weather(props) {
                 </span>
               </li>
               <li className="additions-values" id="feels-like-temp">
-                {Math.round(weatherData.feelsLike)}°C
+                {Math.round(feelsLike)}
+                {unit}
               </li>
 
               <li className="weather-additions">
@@ -117,8 +157,15 @@ export default function Weather(props) {
                 </span>
               </li>
               <li className="additions-values">
-                <span>{Math.round(weatherData.minTemp)}°C</span>/
-                <span>{Math.round(weatherData.maxTemp)}°C</span>
+                <span>
+                  {Math.round(minTemp)}
+                  {unit}
+                </span>
+                /
+                <span>
+                  {Math.round(maxTemp)}
+                  {unit}
+                </span>
               </li>
               <li className="weather-additions">
                 Humidity{" "}
