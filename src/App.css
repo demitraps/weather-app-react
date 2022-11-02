@@ -1,5 +1,5 @@
 body {
-  background: url("https://images.pexels.com/photos/1433278/pexels-photo-1433278.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2")
+  background: url("https://images.unsplash.com/photo-1511314128052-1ba0c3f0081a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1912&q=80")
     no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -10,37 +10,15 @@ body {
   color: #fff;
 }
 
-.App .signature {
-  margin-top: 10px;
-  text-align: center;
-  font-weight: 600;
-  font-size: 12px;
-}
-
-.App .github-link {
-  color: #c8c2c2;
-  text-decoration: none;
-}
-
-.App .github-link:hover {
-  color: #fff;
-}
-
 @media (max-width: 576px) {
   body {
     padding-top: 35px;
     padding-right: 12px;
-  }
-  .App .signature {
-    font-size: 10px;
   }
 }
 
 @media (max-width: 365px) {
   body {
     padding-top: 30px;
-  }
-  .App .signature {
-    font-size: 9px;
   }
 }

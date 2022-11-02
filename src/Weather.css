@@ -35,7 +35,6 @@
 }
 
 .Weather .unit-switch {
-  color: #fff;
   text-decoration: none;
   font-size: 9px;
   font-weight: 800;
@@ -43,7 +42,6 @@
 }
 
 .Weather .fahreneit-switch {
-  color: #fff;
   text-decoration: none;
   font-size: 9px;
   font-weight: 800;
@@ -51,11 +49,10 @@
 }
 
 .Weather .fahreneit-switch:hover {
-  color: rgb(216, 206, 206);
+  color: #393e46 !important;
 }
 
 .Weather .celsius-switch {
-  color: #fff;
   text-decoration: none;
   font-size: 9px;
   font-weight: 800;
@@ -63,7 +60,7 @@
 }
 
 .Weather .celsius-switch:hover {
-  color: rgb(216, 206, 206);
+  color: #393e46 !important;
 }
 
 .weather-now-icon {
@@ -201,7 +198,7 @@
   }
 
   .Weather .right-section {
-    margin-top: 74px;
+    margin-top: 78px;
   }
 
   .Weather .weather-additions {

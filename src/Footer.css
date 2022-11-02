@@ -1,0 +1,54 @@
+.light-grey {
+  color: #c8c2c2 !important;
+}
+
+.light-grey:hover {
+  color: #fff !important;
+}
+.grey {
+  color: #393e46 !important;
+}
+.grey:hover {
+  color: #222831 !important;
+}
+
+.dark-grey {
+  color: #222831 !important;
+}
+.dark-grey:hover {
+  color: #000 !important;
+}
+.dark {
+  color: #000 !important;
+}
+.dark:hover {
+  color: #222831 !important;
+}
+
+.Footer .signature {
+  margin-top: 10px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 12px;
+}
+
+.Footer a {
+  color: #c8c2c2;
+  text-decoration: none;
+}
+
+.Footer a:hover {
+  color: #fff;
+}
+
+@media (max-width: 576px) {
+  .Footer .signature {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 365px) {
+  .Footer .signature {
+    font-size: 9px;
+  }
+}
