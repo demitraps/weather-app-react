@@ -11,7 +11,7 @@ export default function Footer(props) {
   ) {
     return (
       <div className="Footer">
-        <footer className="signature pt-5">
+        <footer className="signature">
           <a
             href="https://github.com/demitraps/react-weather-app"
             target="_blank"
@@ -31,7 +31,7 @@ export default function Footer(props) {
   ) {
     return (
       <div className="Footer">
-        <footer className="signature pt-5">
+        <footer className="signature">
           <a
             href="https://github.com/demitraps/react-weather-app"
             target="_blank"
@@ -47,7 +47,7 @@ export default function Footer(props) {
   } else if (props.iconId === "03n" || props.iconId === "04n") {
     return (
       <div className="Footer">
-        <footer className="signature pt-5">
+        <footer className="signature">
           <a
             href="https://github.com/demitraps/react-weather-app"
             target="_blank"
@@ -63,7 +63,7 @@ export default function Footer(props) {
   } else {
     return (
       <div className="Footer">
-        <footer className="signature pt-5">
+        <footer className="signature">
           <a
             href="https://github.com/demitraps/react-weather-app"
             target="_blank"

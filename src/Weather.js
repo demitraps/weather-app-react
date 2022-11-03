@@ -11,6 +11,8 @@ import {
 import FormattedDate from "./FormattedDate";
 import FormattedTime from "./FormattedTime";
 import FormattedIcon from "./FormattedIcon";
+import WeatherForecast from "./WeatherForecast";
+import WeatherForecastFahreneit from "./WeatherForecastFahreneit";
 import Footer from "./Footer";
 import "./Weather.css";
 
@@ -23,6 +25,10 @@ export default function Weather(props) {
   const [maxTemp, setMaxTemp] = useState("");
   const [unit, setUnit] = useState("°C");
   const [click, setClick] = useState(0);
+  const [celsiusDisplayToggle, setCelsiusDisplayToggle] =
+    useState("display-on");
+  const [fahreneitDisplayToggle, setFahreneitDisplayToggle] =
+    useState("display-off");
 
   function showWeatherData(response) {
     setTemperature(response.data.main.temp);
@@ -33,6 +39,7 @@ export default function Weather(props) {
       readyStatus: true,
       description: response.data.weather[0].description,
       city: response.data.name,
+      coordinates: response.data.coord,
       date: new Date(response.data.dt * 1000),
       icon: response.data.weather[0].icon,
       humidity: response.data.main.humidity,
@@ -64,6 +71,8 @@ export default function Weather(props) {
       setFeelsLike((feelsLike * 9) / 5 + 32);
       setMinTemp((minTemp * 9) / 5 + 32);
       setMaxTemp((maxTemp * 9) / 5 + 32);
+      setCelsiusDisplayToggle("display-off");
+      setFahreneitDisplayToggle("display-on");
     }
   }
 
@@ -76,6 +85,8 @@ export default function Weather(props) {
       setFeelsLike(((feelsLike - 32) * 5) / 9);
       setMinTemp(((minTemp - 32) * 5) / 9);
       setMaxTemp(((maxTemp - 32) * 5) / 9);
+      setCelsiusDisplayToggle("display-on");
+      setFahreneitDisplayToggle("display-off");
     }
   }
 
@@ -200,6 +211,15 @@ export default function Weather(props) {
               <input type="submit" value="Go" />
             </form>
           </div>
+        </div>
+        <div className={celsiusDisplayToggle}>
+          <WeatherForecast coordinates={weatherData.coordinates} unit="C" />
+        </div>
+        <div className={fahreneitDisplayToggle}>
+          <WeatherForecastFahreneit
+            coordinates={weatherData.coordinates}
+            unit="F"
+          />
         </div>
         <Footer iconId={weatherData.icon} />
       </div>

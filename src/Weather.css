@@ -1,3 +1,11 @@
+.Weather .display-off {
+  display: none;
+}
+
+.Weather .display-on {
+  display: block;
+}
+
 .Weather ul {
   list-style-type: none;
 }
