@@ -101,6 +101,7 @@
 }
 
 .Weather input {
+  -webkit-appearance: none;
   margin-left: 5px;
   background: transparent;
   text-align: center;
@@ -110,6 +111,7 @@
 }
 
 .Weather input::placeholder {
+  -webkit-appearance: none;
   color: #fff;
   font-family: "Montserrat", sans-serif;
   font-size: 12px;
@@ -117,10 +119,12 @@
 }
 
 .Weather input[type="search"] {
+  -webkit-appearance: none;
   color: #fff;
 }
 
 .Weather input[type="submit"] {
+  -webkit-appearance: none;
   background-color: #fff;
   border: solid;
   border-width: 1px;
