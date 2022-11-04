@@ -125,6 +125,8 @@
 
 .Weather input[type="submit"] {
   -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   background-color: #fff;
   border: solid;
   border-width: 1px;
