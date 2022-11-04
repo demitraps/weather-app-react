@@ -76,3 +76,10 @@
     margin-top: 10px;
   }
 }
+
+@media (max-width: 221px) {
+  .WeatherForecast .forecast-title {
+    font-weight: 700;
+    font-size: 12px;
+  }
+}

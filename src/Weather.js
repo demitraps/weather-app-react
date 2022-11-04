@@ -143,7 +143,7 @@ export default function Weather(props) {
                     placeholder="Search city..."
                     onChange={handleCityChange}
                   />
-                  <input type="submit" value="Go" />
+                  <input type="submit" value={"Go"} />
                 </form>
               </div>
             </div>
