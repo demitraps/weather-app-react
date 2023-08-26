@@ -59,7 +59,6 @@ export default function FormattedIcon(props) {
     };
 
     document.body.style.backgroundImage = imageMapping[props.iconId];
-    console.log(props.iconId);
 
     if (props.iconId === "13d" || props.iconId === "13n") {
       document.body.style.color = "#3a4750";
